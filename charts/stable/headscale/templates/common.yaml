@@ -1,0 +1,14 @@
+{{/* Append the configMap volume to the volumes */}}
+{{- define "headscale.configVolume" -}}
+enabled: "true"
+mountPath: "/config"
+subPath: "config.yaml"
+type: "custom"
+volumeSpec:
+  configMap:
+    name: {{ include "common.names.fullname" . }}-config
+{{- end -}}
+{{- $_ := set .Values.persistence "headscale-config" (include "headscale.configVolume" . | fromYaml) -}}
+
+{{/* Render the templates */}}
+{{ include "common.all" . }}

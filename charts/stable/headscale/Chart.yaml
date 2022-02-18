@@ -1,0 +1,23 @@
+apiVersion: v2
+appVersion: 1.0.0
+description: headscale helm package
+name: headscale
+version: 1.0.0
+kubeVersion: ">=1.16.0-0"
+keywords:
+- headscale
+home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/headscale
+icon: https://headscale.org/icon
+sources:
+- https://github.com/headscale/headscale-docker
+maintainers:
+- name: headscale
+  email: headscale@headscale.com
+dependencies:
+- name: common
+  repository: https://library-charts.k8s-at-home.com
+  version: 4.3.0
+annotations:
+  artifacthub.io/changes: |
+    - kind: added
+      description: Initial version
