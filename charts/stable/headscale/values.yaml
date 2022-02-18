@@ -13,6 +13,9 @@ image:
   # -- image pull policy
   pullPolicy: IfNotPresent
 
+command: headscale
+args: serve
+
 config: |
     # The url clients will connect to.
     server_url: http://127.0.0.1:8080

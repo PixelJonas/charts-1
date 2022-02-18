@@ -1,7 +1,7 @@
 {{/* Append the configMap volume to the volumes */}}
 {{- define "headscale.configVolume" -}}
 enabled: "true"
-mountPath: "/config"
+mountPath: "/etc/headscale"
 subPath: "config.yaml"
 type: "custom"
 volumeSpec:
