@@ -1,0 +1,23 @@
+apiVersion: v2
+appVersion: 1.0.0
+description: tailscale helm package
+name: tailscale
+version: 1.0.0
+kubeVersion: ">=1.16.0-0"
+keywords:
+- tailscale
+home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/tailscale
+icon: https://tailscale.org/icon
+sources:
+- https://github.com/tailscale/tailscale-docker
+maintainers:
+- name: tailscale
+  email: tailscale@tailscale.com
+dependencies:
+- name: common
+  repository: https://library-charts.k8s-at-home.com
+  version: 4.3.0
+annotations:
+  artifacthub.io/changes: |
+    - kind: added
+      description: Initial version
